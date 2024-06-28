@@ -11,3 +11,11 @@ function getRandomHexColor() {
 
   let colorChangeInterval = null;
   stopBtn.disabled = true;
+
+  function startColorChange() {
+    colorChangeInterval = setInterval(() => {
+        body.style.backgroundColor = getRandomHexColor();
+        stopBtn.disabled = false;
+        startBtn.disabled = true;
+    }, 1000);
+  }
