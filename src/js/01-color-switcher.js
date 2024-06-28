@@ -19,3 +19,5 @@ function getRandomHexColor() {
         startBtn.disabled = true;
     }, 1000);
   }
+
+  function stopColorChange() {}
