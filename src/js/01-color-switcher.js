@@ -20,4 +20,12 @@ function getRandomHexColor() {
     }, 1000);
   }
 
-  function stopColorChange() {}
+  function stopColorChange() {
+    clearInterval(colorChangeInterval);
+    stopBtn.disabled = true;
+    startBtn.disabled = false;
+
+  }
+
+  startBtn.addEventListener('click', startColorChange);
+  stopBtn.addEventListener('click', stopColorChange);
